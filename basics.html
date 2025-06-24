@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +7,74 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; }
     h1 { color: #007acc; }
+    h2 { color: #005f73; }
     code { background: #eee; padding: 2px 6px; border-radius: 4px; }
     ul { line-height: 1.6; }
+    section { margin-bottom: 40px; }
   </style>
 </head>
 <body>
   <h1>Basic Git Commands</h1>
-  <ul>
-    <li><strong>Initialize repo:</strong> <code>git init</code></li>
-    <li><strong>Clone repo:</strong> <code>git clone &lt;url&gt;</code></li>
-    <li><strong>Status:</strong> <code>git status</code></li>
-    <li><strong>Add files:</strong> <code>git add &lt;file&gt;</code></li>
-    <li><strong>Commit:</strong> <code>git commit -m "message"</code></li>
-    <li><strong>Push to GitHub:</strong> <code>git push origin main</code></li>
-    <li><strong>Pull latest changes:</strong> <code>git pull</code></li>
-    <li><strong>Check history:</strong> <code>git log</code></li>
-    <li><strong>Create branch:</strong> <code>git branch &lt;name&gt;</code></li>
-    <li><strong>Switch branch:</strong> <code>git checkout &lt;name&gt;</code></li>
-    <li><strong>Merge branches:</strong> <code>git merge &lt;branch&gt;</code></li>
-  </ul>
+
+  <section>
+    <h2>What is Git?</h2>
+    <p>Git is a version control system that helps you track changes in your project files and collaborate with others.</p>
+  </section>
+
+  <section>
+    <h2>Essential Git Commands</h2>
+    <ul>
+      <li><strong>Initialize repo:</strong> <code>git init</code> – Start a new local repository</li>
+      <li><strong>Clone repo:</strong> <code>git clone &lt;url&gt;</code> – Copy a remote repo to your local machine</li>
+      <li><strong>Status:</strong> <code>git status</code> – Show current changes and branch</li>
+      <li><strong>Add files:</strong> <code>git add &lt;file&gt;</code> – Stage changes for commit</li>
+      <li><strong>Commit:</strong> <code>git commit -m "message"</code> – Save your changes with a message</li>
+      <li><strong>Push:</strong> <code>git push origin main</code> – Upload commits to GitHub</li>
+      <li><strong>Pull:</strong> <code>git pull</code> – Download and merge changes from GitHub</li>
+      <li><strong>Log:</strong> <code>git log</code> – View history of commits</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Understanding Commits</h2>
+    <p>A <strong>commit</strong> is like a snapshot of your project at a certain point in time. Every time you commit, Git saves what changed.</p>
+    <p><strong>Workflow:</strong></p>
+    <ol>
+      <li>Make changes in files</li>
+      <li><code>git add .</code> – Stage the changes</li>
+      <li><code>git commit -m "Describe your change"</code> – Save the snapshot</li>
+    </ol>
+    <p>Good commit messages help you and your team understand the project history.</p>
+  </section>
+
+  <section>
+    <h2>Working with Branches</h2>
+    <p>A <strong>branch</strong> lets you work on a feature or fix separately from the main code (usually <code>main</code>).</p>
+    <ul>
+      <li><code>git branch feature-x</code> – Create a new branch</li>
+      <li><code>git checkout feature-x</code> – Switch to the branch</li>
+      <li><code>git switch feature-x</code> – (newer alternative to checkout)</li>
+      <li><code>git merge feature-x</code> – Merge it into main</li>
+      <li><code>git branch -d feature-x</code> – Delete the branch after merging</li>
+    </ul>
+    <p>Branching allows safe, parallel development without affecting your main codebase.</p>
+  </section>
+
+  <section>
+    <h2>Typical Git Workflow</h2>
+    <ol>
+      <li><code>git clone &lt;repo-url&gt;</code></li>
+      <li><code>git checkout -b new-feature</code></li>
+      <li>Make changes</li>
+      <li><code>git add .</code></li>
+      <li><code>git commit -m "Added new feature"</code></li>
+      <li><code>git push -u origin new-feature</code></li>
+      <li>Create Pull Request on GitHub and merge</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Created by Laki | GitHub: <a href="https://github.com/lakikishorsubba/basics" target="_blank">lakikishorsubba/basics</a></p>
+  </footer>
 </body>
 </html>
